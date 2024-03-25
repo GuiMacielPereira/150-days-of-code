@@ -14,10 +14,10 @@ log_file="log.md"
 
 # Append the header and title to the log file
 echo "" >> "$log_file" # Add a blank line for separation
-echo "## $header" >> "$log_file"
-echo "### $title" >> "$log_file"
-echo "*Description*: $description" >> "$log_file"
-echo "*Feelings*: $feelings" >> "$log_file"
+echo "### $header" >> "$log_file"
+echo "#### $title" >> "$log_file"
+echo "**Description**: $description" >> "$log_file"
+echo "**Feelings**: $feelings" >> "$log_file"
 echo "" >> "$log_file" # Add a blank line for separation
 
 # Optionally, you can add some additional information or prompt for input here
