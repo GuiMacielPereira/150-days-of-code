@@ -17,6 +17,7 @@ echo "" >> "$log_file" # Add a blank line for separation
 echo "### $header" >> "$log_file"
 echo "#### $title" >> "$log_file"
 echo "**Description**: $description" >> "$log_file"
+echo "" >> "$log_file" # Add a blank line for separation
 echo "**Feelings**: $feelings" >> "$log_file"
 echo "" >> "$log_file" # Add a blank line for separation
 
