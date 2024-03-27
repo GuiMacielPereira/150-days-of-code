@@ -11,3 +11,10 @@
 
 **Feelings**: Today was chill and slayfull, am still feeling focused but need to go to sleep. But it was annoying that the stupid ifstream is not opening the file properly and I have no clue why.
 
+
+### 2024-03-27 20:35:10
+#### Fixed issue with I/O files
+**Description**: Implemented a write and read of html file
+
+**Feelings**: Literally spent the whole hour on something so simple as figurining out that paths need to writen relative to the o the EXECUTABLE objectt, not the CPP file, which makes perfect sense but I guess you get used to bad habits when you code in Python. Emotionally wise it was very slayful, I actually managed to (dareisay) *enjoy* myself.
+
