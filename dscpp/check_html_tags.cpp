@@ -2,8 +2,10 @@
 #include <stack>
 #include <string>
 #include <fstream>
+#include <filesystem>
 
 
+// Very proud of this little function UwU, worked first time
 bool check_tags(std::ifstream& istrm) {
   if (!istrm) {
     std::cout << "Unable to open input file!" << std::endl;
@@ -38,7 +40,32 @@ bool check_tags(std::ifstream& istrm) {
   return true;
 }
 
+
+// Cool way of formatting strings
+std::string testhtml {R"(
+<html>
+   <head>
+      <title>
+         Example
+      </title>
+   </head>
+
+   <body>
+      <h1>Hello, world</h1>
+   </body>
+</html>
+)"};
+
+
 int main() {
-  std::ifstream istrm {"~/150-days-of-code/dscpp/simple.txt"};
-  std::cout << check_tags(istrm) << std::endl;
+  // Create html file
+  std::ofstream ostrm {"basic.html"};
+  ostrm << testhtml;
+  ostrm.close();
+
+  // Read html from file
+  std::ifstream istrm {"basic.html"};
+  std::string message = check_tags(istrm) ? "File parsed correctly!" : "Tags in file don't match";
+  std::cout << message << std::endl;
+  istrm.close();
 }
