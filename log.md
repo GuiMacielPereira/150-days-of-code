@@ -18,3 +18,10 @@
 
 **Feelings**: Literally spent the whole hour on something so simple as figurining out that paths need to writen relative to the o the EXECUTABLE objectt, not the CPP file, which makes perfect sense but I guess you get used to bad habits when you code in Python. Emotionally wise it was very slayful, I actually managed to (dareisay) *enjoy* myself.
 
+
+### 2024-03-28 20:24:45
+#### Did palindrome checker
+**Description**: What it says on the title lol
+
+**Feelings**: I am not sure how I spent so much time doing such a simple exercise lol. Today I was very focused at work so overall felt very slayful. 10/10
+
