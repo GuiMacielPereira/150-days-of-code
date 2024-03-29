@@ -25,3 +25,10 @@
 
 **Feelings**: I am not sure how I spent so much time doing such a simple exercise lol. Today I was very focused at work so overall felt very slayful. 10/10
 
+
+### 2024-03-29 13:54:41
+#### Linked List
+**Description**: Read through the intro to making a LinkedList class and tried implementing my own version without relying on the guide. Actually took much longer than expected and it is still not working :/
+
+**Feelings**: I felt pretty good, not amazing but also not too frustrated. Getting started did suck though and I procrastinated a lot before it xD
+
