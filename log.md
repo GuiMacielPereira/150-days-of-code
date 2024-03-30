@@ -32,3 +32,10 @@
 
 **Feelings**: I felt pretty good, not amazing but also not too frustrated. Getting started did suck though and I procrastinated a lot before it xD
 
+
+### 2024-03-30 08:27:30
+#### Remove method for linked list
+**Description**: Spent most of the time correcting previous methods of the linked list and adding a new remove method.
+
+**Feelings**: Really amazing actually, since this is the first thing I am doing right after waking up. I am going to London today. Slay.
+
