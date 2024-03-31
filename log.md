@@ -39,3 +39,10 @@
 
 **Feelings**: Really amazing actually, since this is the first thing I am doing right after waking up. I am going to London today. Slay.
 
+
+### 2024-03-31 11:27:33
+#### Finished linked list
+**Description**: Added methods insert, append and index.
+
+**Feelings**: The same as yesterday, really, did this first thing in the morning so I was focused and time went by quickly
+
