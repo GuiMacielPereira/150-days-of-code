@@ -46,3 +46,10 @@
 
 **Feelings**: The same as yesterday, really, did this first thing in the morning so I was focused and time went by quickly
 
+
+### 2024-04-01 08:30:28
+#### Ordered linked list
+**Description**: Started separating files to play around with inheritance and ordered lists but I got stuck on something stupid that Ianot understanding why it's not working.
+
+**Feelings**: I am actually a bit hungover this morning and overall was not feeling it but it wasn't too bad.
+
