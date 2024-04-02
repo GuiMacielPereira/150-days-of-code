@@ -3,7 +3,8 @@
 #include <iostream>
 
 int main() try {
-  UnorderedLinkedList<int> ll;
+  // UnorderedLinkedList<int> ll;
+  OrderedLinkedList<int> ll;
   ll.add(4);
   ll.add(5);
   ll.add(6);
@@ -23,7 +24,7 @@ int main() try {
   std::cout << ll;
   ll.insert(3, 3);
   std::cout << ll;
-  ll.append(9);
+  // ll.append(9);
   std::cout << ll;
   std::cout << ll.index(0) << std::endl;
   std::cout << ll.index(2) << std::endl;

@@ -27,6 +27,7 @@ public:
   }
 
   virtual void add (T val) = 0;
+  virtual void insert (T val, int idx) = 0;
 
   bool isempty() const {
     return head ==  nullptr;
@@ -79,37 +80,6 @@ public:
     return;
   }
 
-  void insert (T val, int idx) {
-    Node<T>* curr=head;
-    Node<T>* prev=nullptr;
-
-    for (int i=0;; i++) {
-      if (i==idx) {
-        auto newNode = new Node<T>(val);
-
-        if (i==0) {
-          newNode->ptrToNxt = head;
-          head = newNode;
-          return;
-        } else {
-          prev->ptrToNxt = newNode;
-          newNode->ptrToNxt = curr;
-          return;
-        }
-      }
-      if (curr==nullptr) {   // Conditonal here instead of loop to account for edge case of end of list
-        break;
-      }
-      prev = curr;
-      curr = curr->ptrToNxt;
-    }
-    throw std::out_of_range("Index provided is out of range.");
-  }
-
-  void append (int val) {
-    insert (val, 0);
-  }
-
   T index (int idx) const {
     Node<T>* curr=head;
     for (int i=0; curr!=nullptr; i++) {
@@ -135,10 +105,88 @@ public:
 template<typename T>
 class UnorderedLinkedList : public LinkedList<T> {
 public:
-  UnorderedLinkedList(){};
+  UnorderedLinkedList() : LinkedList<T>{} {};
+
   void add(T val) override {
     auto temp = new Node<T>(val);
-    temp->ptrToNxt = head;
-    head = temp;
+    temp->ptrToNxt = this->head;
+    this->head = temp;
+  }
+
+  void append (int val) {
+    insert (val, 0);
+  }
+
+  void insert (T val, int idx) {
+    Node<T>* curr=this->head;
+    Node<T>* prev=nullptr;
+
+    for (int i=0;; i++) {
+      if (i==idx) {
+        auto newNode = new Node<T>(val);
+
+        if (i==0) {
+          newNode->ptrToNxt = this->head;
+          this->head = newNode;
+          return;
+        } else {
+          prev->ptrToNxt = newNode;
+          newNode->ptrToNxt = curr;
+          return;
+        }
+      }
+      if (curr==nullptr) {   // Conditonal here instead of loop to account for edge case of end of list
+        break;
+      }
+      prev = curr;
+      curr = curr->ptrToNxt;
+    }
+    throw std::out_of_range("Index provided is out of range.");
+  }
+};
+
+template<typename T>
+class OrderedLinkedList : public LinkedList<T> {
+public:
+  OrderedLinkedList() : LinkedList<T>{} {};
+
+  void add(T val) override {
+
+    if ((this->head!=nullptr) && (val < this->head->val)) {
+      throw std::invalid_argument("Can't add lower value than head of current list");
+    }
+    auto temp = new Node<T>(val);
+    temp->ptrToNxt = this->head;
+    this->head = temp;
+    return;
+  }
+
+  void insert (T val, int idx) {
+    Node<T>* curr=this->head;
+    Node<T>* prev=nullptr;
+
+    for (int i=0;; i++) {
+      if (i==idx) {
+        if ((prev!=nullptr) && (val <= prev->val && val >= curr->val)) {
+          throw std::invalid_argument("Value to insert is not in between values of previous and current");
+        }
+        auto newNode = new Node<T>(val);
+        if (i==0) {
+          newNode->ptrToNxt = this->head;
+          this->head = newNode;
+          return;
+        } else {
+          prev->ptrToNxt = newNode;
+          newNode->ptrToNxt = curr;
+          return;
+        }
+      }
+      if (curr==nullptr) {   // Conditonal here instead of loop to account for edge case of end of list
+        break;
+      }
+      prev = curr;
+      curr = curr->ptrToNxt;
+    }
+    throw std::out_of_range("Index provided is out of range.");
   }
 };

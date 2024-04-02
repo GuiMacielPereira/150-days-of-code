@@ -53,3 +53,10 @@
 
 **Feelings**: I am actually a bit hungover this morning and overall was not feeling it but it wasn't too bad.
 
+
+### 2024-04-02 20:57:50
+#### Almost finished ordered linked list
+**Description**: Found out that its easy to get inheritance wrong when using templates. Need to use this->method to make method work with inherited classes. Added small modification to OrderedLinkedList
+
+**Feelings**: I was quite tired actually and it was a struggle to get started. But overall it went quite smoothlyly. I found a really interesting behaviuor of using inheritance with templates so I am satisfied.
+
