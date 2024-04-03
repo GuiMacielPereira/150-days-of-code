@@ -60,3 +60,10 @@
 
 **Feelings**: I was quite tired actually and it was a struggle to get started. But overall it went quite smoothlyly. I found a really interesting behaviuor of using inheritance with templates so I am satisfied.
 
+
+### 2024-04-03 20:53:56 - Day 10
+#### Finished linked list
+**Description**: Added a better checking for the case where inserting nodes on an ordered linked list
+
+**Feelings**: Honestly today was a SLOG. I finished a tiny correction early and then stalled for the rest of the time becaue I did NOT want to start the chapter exercises. But having read the exercises, they seem straightforward enough.
+

@@ -167,8 +167,20 @@ public:
 
     for (int i=0;; i++) {
       if (i==idx) {
-        if ((prev!=nullptr) && (val <= prev->val && val >= curr->val)) {
-          throw std::invalid_argument("Value to insert is not in between values of previous and current");
+
+        // Section of asserts for ordered sequence
+        if (prev!=nullptr && curr!=nullptr) {
+          if (val <= prev->val && val >= curr->val) {
+            throw std::invalid_argument("Value to insert is not in between values of previous and current");
+          } else if (prev==nullptr) {
+            if (val >= curr->val) {
+              throw std::invalid_argument("Value to insert at the begining is not lower than head");
+            }
+          } else if (curr==nullptr) {
+            if (val <= prev->val) {
+              throw std::invalid_argument("Value to insert at the tail is not bigger");
+            }
+          }
         }
         auto newNode = new Node<T>(val);
         if (i==0) {
