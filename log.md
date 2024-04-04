@@ -67,3 +67,10 @@
 
 **Feelings**: Honestly today was a SLOG. I finished a tiny correction early and then stalled for the rest of the time becaue I did NOT want to start the chapter exercises. But having read the exercises, they seem straightforward enough.
 
+
+### 2024-04-04 20:55:09 - Day 11
+#### Implemented queue using a foward list
+**Description**: The implementation was easy but for some reason I can't decrement the pointer to the last element
+
+**Feelings**: Eh today was okay, towards the end I couldn't resist and looked up an interesting perfume brand that I have been looking at lately.
+

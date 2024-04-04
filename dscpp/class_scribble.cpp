@@ -14,3 +14,5 @@ public:
     // Need to access method through this-> to force it to look for depenent names
   }
 };
+
+int main() {}
