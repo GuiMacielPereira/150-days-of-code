@@ -1,4 +1,4 @@
-#include <forward_list>
+#include <list>
 #include <iostream>
 #include <queue>
 #include <iterator>
@@ -10,7 +10,7 @@ class QueueList{
     void push(T elem);
 
   private:
-    std::forward_list<T> m_list;
+    std::list<T> m_list;
 
   template<typename Y>
   friend std::ostream& operator<<(std::ostream& os, const QueueList<Y> &fl) {
@@ -22,7 +22,9 @@ class QueueList{
 };
 
 template<typename T> void QueueList<T>::pop() {
-  m_list.erase_after(m_list.end()--);
+  // This works because it is a doubly linked list
+  // i.e. there is a pointer to the previous element of the iterator
+  m_list.erase(--m_list.end());
 }
 
 template<typename T> void QueueList<T>::push( T elem ) {

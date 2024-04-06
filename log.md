@@ -74,3 +74,10 @@
 
 **Feelings**: Eh today was okay, towards the end I couldn't resist and looked up an interesting perfume brand that I have been looking at lately.
 
+
+### 2024-04-06 13:49:20 - Day 12
+#### Fixed issue with end iterator of forward list
+**Description**: Replaced using a forward list with a list (double linked) so that I can decrement list.end() to the previous value. Aalso I was today years old when I found out ++i and i++ return entirely different things. ++i returns reference to the incremented object, i++ retns copy to object before increment. Really had no idea about this, but I understand now why it was breaking my code
+
+**Feelings**: Uhmmmmmmmmmm relly not productive at alllllll, it started badly by having my roomate blast the TV in his room the entire time, I don't understand why someone would have the need to watch a TV show that loudly.
+
