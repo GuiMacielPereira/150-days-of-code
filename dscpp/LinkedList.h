@@ -14,6 +14,7 @@ template<typename T>
 class LinkedList {
 protected:
   Node<T>* head = nullptr;
+  int m_size = 0;
 
 public:
   LinkedList(){};
@@ -45,13 +46,7 @@ public:
   }
 
   int size() const {
-    Node<T>* buff = head;   // Avoid rewriting head
-    int count = 0;
-    while (buff!=nullptr) {
-      buff = buff->ptrToNxt;
-      count++;
-    }
-    return count;
+    return m_size;
   }
 
   void remove(T val) {
@@ -65,11 +60,13 @@ public:
         if (prev==nullptr) {
           head = head->ptrToNxt;
           delete curr;
+          m_size--;
           return;
 
         } else {
           prev->ptrToNxt = curr->ptrToNxt;
           delete curr;
+          m_size--;
           return;
         } 
       }
@@ -91,13 +88,36 @@ public:
     throw std::out_of_range("Index is out of range of linked list");
   }
 
+LinkedList<T> slice (int start, int stop) {
+  if (start > stop) {
+    throw std::invalid_argument("Start of slice cannot be bigger than end.");
+  }
+  LinkedList<T> ll_buff;
+  LinkedList<T> ll_copy;
+
+  // Put nodes in buffer list (acts as a stack)
+  Node<T> curr = head;
+  for (int i=0; i<stop; i++) {
+    if (i>=start) {
+      ll_buff.add(curr);
+    }
+    curr = curr.ptrToNxt;
+  }
+  while (!ll_buff.empty()) {
+    ll_copy.add(ll_buff.head);
+    ll_buff.pophead();
+  }
+  return ll_copy;
+}
+
   friend std::ostream& operator<<(std::ostream& os, const LinkedList<T>& ll) {
     Node<T>* buff = ll.head;
+    os << '[';
     while (buff != nullptr) {
       os << buff->val << " ";
       buff = buff->ptrToNxt;
     }
-    os << std::endl;
+    os << ']' << std::endl;
     return os;
   }
 };
@@ -111,10 +131,12 @@ public:
     auto temp = new Node<T>(val);
     temp->ptrToNxt = this->head;
     this->head = temp;
+    this->m_size++;
   }
 
   void append (int val) {
     insert (val, 0);
+    this->m_size++;
   }
 
   void insert (T val, int idx) {
@@ -128,10 +150,12 @@ public:
         if (i==0) {
           newNode->ptrToNxt = this->head;
           this->head = newNode;
+          this->m_size++;
           return;
         } else {
           prev->ptrToNxt = newNode;
           newNode->ptrToNxt = curr;
+          this->m_size++;
           return;
         }
       }
@@ -158,6 +182,7 @@ public:
     auto temp = new Node<T>(val);
     temp->ptrToNxt = this->head;
     this->head = temp;
+    this->m_size++;
     return;
   }
 
@@ -186,10 +211,12 @@ public:
         if (i==0) {
           newNode->ptrToNxt = this->head;
           this->head = newNode;
+          this->m_size++;
           return;
         } else {
           prev->ptrToNxt = newNode;
           newNode->ptrToNxt = curr;
+          this->m_size++;
           return;
         }
       }

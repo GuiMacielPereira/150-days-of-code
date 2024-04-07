@@ -81,3 +81,10 @@
 
 **Feelings**: Uhmmmmmmmmmm relly not productive at alllllll, it started badly by having my roomate blast the TV in his room the entire time, I don't understand why someone would have the need to watch a TV show that loudly.
 
+
+### 2024-04-07 10:14:07 - Day 13
+#### MOdified some methods for linked list
+**Description**: Did better implementation of size() and started implementing slice() method. Also confirmed that using push and pop on a doubly linked list is O(1) (same as queue)
+
+**Feelings**: I was tired and not massively productive but overall it went fine
+

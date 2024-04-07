@@ -1,7 +1,6 @@
 #include <list>
 #include <iostream>
 #include <queue>
-#include <iterator>
 
 template<typename T>
 class QueueList{
@@ -51,27 +50,34 @@ std::pair<double, double> cookie_cutter_times(T &q, int size) {
 }
 
 int main () {
-  QueueList<int> ql;
-  ql.push(4);
-  ql.push(3);
-  ql.push(7);
-  std::cout << ql;
-  ql.pop();
-  std::cout << ql;
-  ql.pop();
-  std::cout << ql;
-  // std::cout << "Std Queue Push, List Queue Push, Std Queue Pop, List Queue Pop" << std::endl;
-  //
-  //   for(int a = 10000; a < 1000001; a = a + 20000) {
-  //     std::queue<int> stdqueue;
-  //     QueueList<int> listqueue; 
-  //
-  //     auto queue_times = cookie_cutter_times(stdqueue, a);
-  //     auto qlist_times = cookie_cutter_times(listqueue, a);
-  //
-  //     std::cout << queue_times.first << "  " << qlist_times.first << "  "
-  //     << queue_times.second << "  " << qlist_times.second << std::endl;
-  //   }
-  //   return 0;
+  // QueueList<int> ql;
+  // ql.push(4);
+  // ql.push(3);
+  // ql.push(7);
+  // std::cout << ql;
+  // ql.pop();
+  // std::cout << ql;
+  // ql.pop();
+  // std::cout << ql;
+  std::cout << "Std Queue Push, List Queue Push, Std Queue Pop, List Queue Pop" << std::endl;
+
+    for(int a = 10000; a < 1000001; a = a + 20000) {
+      std::queue<int> stdqueue;
+      QueueList<int> listqueue; 
+
+      auto queue_times = cookie_cutter_times(stdqueue, a);
+      auto qlist_times = cookie_cutter_times(listqueue, a);
+
+      std::cout << queue_times.first << "  " << qlist_times.first << "  "
+      << queue_times.second << "  " << qlist_times.second << std::endl;
+    }
+    return 0;
+
+  /* 
+  Results:
+  The push and pop methods take the same time for both cases.
+  This makes sense becuase a linked list has pointers to both the beggining and 
+  end of the list.
+  */
 }
 
