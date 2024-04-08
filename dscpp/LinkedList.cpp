@@ -32,6 +32,12 @@ int main() try {
   std::cout << ll.index(0) << std::endl;
   std::cout << ll.index(2) << std::endl;
   std::cout << ll.index(3) << std::endl;
+  ll.add(4);
+  ll.add(6);
+  ll.add(2);
+  std::cout << ll;
+  // UnorderedLinkedList<int> slc_ll = ll.slice(2, 5);
+  // std::cout << slc_ll;
 } catch (const std::exception& e) {
   std::cout << e.what() << std::endl;
 }

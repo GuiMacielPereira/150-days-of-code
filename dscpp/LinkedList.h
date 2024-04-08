@@ -1,5 +1,6 @@
 #include <stdexcept>
 #include <iostream>
+#include <typeinfo>
 
 template<typename T> 
 class Node {
@@ -92,6 +93,7 @@ LinkedList<T> slice (int start, int stop) {
   if (start > stop) {
     throw std::invalid_argument("Start of slice cannot be bigger than end.");
   }
+  // This might be the most stupid implementation of this method buy see if I care lol
   LinkedList<T> ll_buff;
   LinkedList<T> ll_copy;
 

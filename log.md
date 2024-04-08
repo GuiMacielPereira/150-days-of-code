@@ -88,3 +88,10 @@
 
 **Feelings**: I was tired and not massively productive but overall it went fine
 
+
+### 2024-04-08 20:59:36 - Day 14
+#### Looking into polymorphism
+**Description**: Tried to do something I think is not allowed
+
+**Feelings**: I wonder if it is possible to define a virtual function in a parent class whose different behaviour in its children class is to return the type of the children. Otherwise the code needs to be repeated twice in each implementation at each child class :/
+
