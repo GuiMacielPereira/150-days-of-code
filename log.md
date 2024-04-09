@@ -95,3 +95,10 @@
 
 **Feelings**: I wonder if it is possible to define a virtual function in a parent class whose different behaviour in its children class is to return the type of the children. Otherwise the code needs to be repeated twice in each implementation at each child class :/
 
+
+### 2024-04-09 20:54:35 - Day 15
+#### Finished slice implementation
+**Description**: I gave up trying to do a virtual function and ended up implementing the slice capability whithin the OrderedLinkedList.
+
+**Feelings**: It was okay, not massively productive.
+

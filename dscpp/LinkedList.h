@@ -1,6 +1,7 @@
 #include <stdexcept>
 #include <iostream>
 #include <typeinfo>
+#include <stack>
 
 template<typename T> 
 class Node {
@@ -89,28 +90,6 @@ public:
     throw std::out_of_range("Index is out of range of linked list");
   }
 
-LinkedList<T> slice (int start, int stop) {
-  if (start > stop) {
-    throw std::invalid_argument("Start of slice cannot be bigger than end.");
-  }
-  // This might be the most stupid implementation of this method buy see if I care lol
-  LinkedList<T> ll_buff;
-  LinkedList<T> ll_copy;
-
-  // Put nodes in buffer list (acts as a stack)
-  Node<T> curr = head;
-  for (int i=0; i<stop; i++) {
-    if (i>=start) {
-      ll_buff.add(curr);
-    }
-    curr = curr.ptrToNxt;
-  }
-  while (!ll_buff.empty()) {
-    ll_copy.add(ll_buff.head);
-    ll_buff.pophead();
-  }
-  return ll_copy;
-}
 
   friend std::ostream& operator<<(std::ostream& os, const LinkedList<T>& ll) {
     Node<T>* buff = ll.head;
@@ -229,5 +208,32 @@ public:
       curr = curr->ptrToNxt;
     }
     throw std::out_of_range("Index provided is out of range.");
+  }
+
+  // I tried to implement this in a virtual function 
+  // But my LSP was not working properly so fuck it
+  // Still don't know how I would do a virtual function
+  // that returns the children type
+  OrderedLinkedList<T> slice (int start, int stop) {
+    if (start > stop) {
+      throw std::invalid_argument("Start of slice cannot be bigger than end.");
+    }
+    // This might be the most stupid implementation of this method buy see if I care lol
+    std::stack<Node<T>*> buff;
+    OrderedLinkedList<T> ll_copy;
+
+    // Put nodes in buffer list (acts as a stack)
+    Node<T>* curr = this->head;
+    for (int i=0; i<stop; i++) {
+      if (i>=start) {
+        buff.push(curr);
+      }
+      curr = curr->ptrToNxt;
+    }
+    while (!buff.empty()) {
+      ll_copy.add(buff.top()->val);
+      buff.pop();
+    }
+    return ll_copy;
   }
 };

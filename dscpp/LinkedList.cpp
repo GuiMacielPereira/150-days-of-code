@@ -20,11 +20,15 @@ int main() try {
   ll.remove(4);
   std::cout << ll;
   std::cout << "size: " << ll.size() << std::endl;
-  ll.insert(1, 0);
-  std::cout << ll;
-  ll.insert(2, 1);
-  std::cout << ll;
-  ll.insert(3, 3);
+  ll.add(8);
+  ll.add(9);
+  ll.add(10);
+  ll.add(12);
+  // ll.insert(1, 0);
+  // std::cout << ll;
+  // ll.insert(2, 1);
+  // std::cout << ll;
+  // ll.insert(3, 3);
   std::cout << ll;
   std::cout << "size: " << ll.size() << std::endl;
   // ll.append(9);
@@ -32,12 +36,9 @@ int main() try {
   std::cout << ll.index(0) << std::endl;
   std::cout << ll.index(2) << std::endl;
   std::cout << ll.index(3) << std::endl;
-  ll.add(4);
-  ll.add(6);
-  ll.add(2);
   std::cout << ll;
-  // UnorderedLinkedList<int> slc_ll = ll.slice(2, 5);
-  // std::cout << slc_ll;
+  OrderedLinkedList<int> slc_ll = ll.slice(2, 5);
+  std::cout << "slice: " << slc_ll;
 } catch (const std::exception& e) {
   std::cout << e.what() << std::endl;
 }
