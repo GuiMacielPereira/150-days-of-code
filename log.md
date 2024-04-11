@@ -102,3 +102,10 @@
 
 **Feelings**: It was okay, not massively productive.
 
+
+### 2024-04-11 08:34:19 - Day 16
+#### Set base for doubly linked list
+**Description**: Doing a doubly linked list from the top of my head, I should be able to improve the remove and insert algorithms by looping simultaneously from the front and back
+
+**Feelings**: Pretty good, today's session was a bit reduced in time, but I made up for it by paying more attention
+
