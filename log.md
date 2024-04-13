@@ -109,3 +109,10 @@
 
 **Feelings**: Pretty good, today's session was a bit reduced in time, but I made up for it by paying more attention
 
+
+### 2024-04-12 18:52:19 - Day 17
+#### Implemented search function for double linked list
+**Description**: I am literally sitting in an art deco caffe trying to implement a loop that starts from both the head and tail of a linked list. My implementation was correct at first but I wasted the entire hour debugging a typo that I had made into the print out statements (hence why I was super confused as to why my implementation was not working)
+
+**Feelings**: Today I am feeling okay, spent the day in sunny scorching hot portugal and am now working from a nivce caffe so it went fine I guess? I don't know, I do like my routines, this kind of travelling kills my body (yes I am 25)
+
