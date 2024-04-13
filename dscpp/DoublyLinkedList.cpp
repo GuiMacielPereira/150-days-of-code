@@ -12,12 +12,10 @@ public:
 
 template<typename T>
 class DoublyLinkedList {
-private:
+public:
   Node<T>* head = nullptr;
   Node<T>* tail = nullptr;
   int size = 0;
-
-public:
   DoublyLinkedList<T> () {};
   bool empty();
   void add(T val);
@@ -57,15 +55,17 @@ void DoublyLinkedList<T>::add(T val) {
   // List is empty, create head
   tail = temp;
   head = temp;
+  size++;
   return;
 }
 
 template<typename T> 
 void DoublyLinkedList<T>::pop() {
-  if (!this->empty()) {
-    // If single element, both are set to nullptr, all good
-    head = head->next;
+  if (empty()) {
+    return;
   }
+  head = head->next;
+  size--;
 }
 
 template<typename T> 
@@ -90,6 +90,35 @@ bool DoublyLinkedList<T>::search(T val) {
     }
   }
   return false;
+}
+
+template<typename T> 
+void DoublyLinkedList<T>::remove_at(int idx) {
+  // Actually this implementation should be simpler than for single linked lists
+
+  if (idx > size-1) {
+    std::cout << "Idex out of range of list size " << size << "\n";
+  }
+  Node<T>* curr = head;
+  for (int i=0; i<idx; i++) {
+    curr = curr->next;
+  }
+  if (curr==head) {
+    if (head->next!=nullptr) {
+      head->next->prev = nullptr;
+    }
+    head = head->next;
+  } else if (curr==tail) {
+    if (tail->prev!=nullptr) {
+      tail->prev->next = nullptr;
+    }
+    tail = tail->prev;
+  } else {
+    curr->prev->next = curr->next;
+    curr->next->prev = curr->prev;
+  }
+  delete curr;
+  return;
 }
 
 int main () {
@@ -117,4 +146,17 @@ int main () {
   dll.pop();
   std::cout << dll << std::endl;
   std::cout << "Value of 1 in list: " << dll.search(1) << std::endl;
+  dll.add(4);
+  dll.add(5);
+  dll.add(6);
+  dll.add(7);
+  std::cout << dll << std::endl;
+  dll.remove_at(3);
+  std::cout << dll << std::endl;
+  dll.remove_at(1);
+  std::cout << dll << std::endl;
+  dll.remove_at(0);
+  std::cout << dll << std::endl;
+  dll.remove_at(0);
+  std::cout << dll << std::endl;
 }

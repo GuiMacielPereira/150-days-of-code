@@ -116,3 +116,10 @@
 
 **Feelings**: Today I am feeling okay, spent the day in sunny scorching hot portugal and am now working from a nivce caffe so it went fine I guess? I don't know, I do like my routines, this kind of travelling kills my body (yes I am 25)
 
+
+### 2024-04-14 00:17:54 - Day 18
+#### Made method for removing from linked list
+**Description**: THe implementation is working but it looks a bit messy, I wonder how I could make it more elegant
+
+**Feelings**: Todya I started working late because I spend the entire day at the beach, got a tiny bit sunburnt and procrastinated doing this hour. I was tired and really not feeling it but after I started I somehow kept going?? Anyways I have a new implementation for the remove method.
+
