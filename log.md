@@ -130,3 +130,10 @@
 
 **Feelings**: Pretty good, I am actually doing this in the following day because yesterday I felt exhausted, and Iwould rather sleep.
 
+
+### 2024-04-15 13:42:03 - Day 20
+#### Started recursion chapter
+**Description**: Read first example of recursion (classic adding numbers of an array) and did two more string exercises with recursion (reversing a string and checking palindromes). I found them very enlightning, it seems that often a problem that can be solved with a stack could be solved with a recursive function? Anyways, recursive functions scratch an itch in my brain in a way that for loops do not, maybe because they ar e more in a closed form in a way?? idk how to explain it lol
+
+**Feelings**: Felt great, in the beggining I was so slow but then somehow got into it yeah
+
