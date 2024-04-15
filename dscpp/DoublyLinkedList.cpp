@@ -1,6 +1,5 @@
 #include <iostream>
 
-
 template<typename T>
 class Node {
 public:
@@ -50,6 +49,7 @@ void DoublyLinkedList<T>::add(T val) {
     temp->next = head;
     head->prev = temp;
     head = temp;
+    size++;
     return;
   }
   // List is empty, create head
@@ -66,6 +66,7 @@ void DoublyLinkedList<T>::pop() {
   }
   head = head->next;
   size--;
+  return;
 }
 
 template<typename T> 
@@ -103,21 +104,71 @@ void DoublyLinkedList<T>::remove_at(int idx) {
   for (int i=0; i<idx; i++) {
     curr = curr->next;
   }
-  if (curr==head) {
-    if (head->next!=nullptr) {
-      head->next->prev = nullptr;
-    }
+  if (this->empty()) {
+    return;
+  }
+  if (head==tail) {
+    head=nullptr;
+    tail=nullptr;
+  } else if (curr==head) {
+    head->next->prev = nullptr;
     head = head->next;
   } else if (curr==tail) {
-    if (tail->prev!=nullptr) {
-      tail->prev->next = nullptr;
-    }
+    tail->prev->next = nullptr;
     tail = tail->prev;
   } else {
     curr->prev->next = curr->next;
     curr->next->prev = curr->prev;
   }
   delete curr;
+  size--;
+  return;
+}
+
+template<typename T>
+void DoublyLinkedList<T>::insert_at(T val, int idx) {
+  if (idx > size) {
+    std::cout << "Idex out of range of list size " << size << "\n";
+  }
+
+  Node<T>* newNode = new Node (val);
+
+  if (this->empty()) {
+    if (idx==0) {
+      head = newNode;      
+      tail = newNode;
+    }
+    size++;
+    return;
+  }
+
+  if (idx==size) {
+    // Insert tail
+    tail->next = newNode;
+    newNode->prev = tail;
+    tail = newNode;
+    size++;
+    return;
+  }
+
+  Node<T>* curr = head;
+  for (int i=0; i<idx; i++) {
+    curr = curr->next;
+  }
+
+  if (curr==head) {
+    // Insert head
+    head->prev = newNode;
+    newNode->next = head;
+    head = newNode;
+  } else {
+    curr->prev->next = newNode;
+    newNode->prev = curr->prev->next;
+
+    curr->prev = newNode;
+    newNode->next = curr;
+  }
+  size++;
   return;
 }
 
@@ -158,5 +209,13 @@ int main () {
   dll.remove_at(0);
   std::cout << dll << std::endl;
   dll.remove_at(0);
+  std::cout << dll << std::endl;
+  dll.insert_at(4, 0);
+  std::cout << dll << std::endl;
+  dll.insert_at(9, 0);
+  std::cout << dll << std::endl;
+  dll.insert_at(9, 1);
+  std::cout << dll << std::endl;
+  dll.insert_at(9, 3);
   std::cout << dll << std::endl;
 }

@@ -123,3 +123,10 @@
 
 **Feelings**: Todya I started working late because I spend the entire day at the beach, got a tiny bit sunburnt and procrastinated doing this hour. I was tired and really not feeling it but after I started I somehow kept going?? Anyways I have a new implementation for the remove method.
 
+
+### 2024-04-15 12:20:21 - Day 19
+#### Finished doubly linked list class
+**Description**: Added method for inserting nodes
+
+**Feelings**: Pretty good, I am actually doing this in the following day because yesterday I felt exhausted, and Iwould rather sleep.
+
