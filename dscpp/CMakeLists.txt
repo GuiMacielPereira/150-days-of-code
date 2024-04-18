@@ -4,6 +4,7 @@ project(MyProject)
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Specify the output directory for executables
 set(EXECUTABLE_OUTPUT_PATH "${CMAKE_BINARY_DIR}")
@@ -26,4 +27,6 @@ foreach(SOURCE_FILE IN LISTS SOURCES)
     get_filename_component(EXECUTABLE_NAME ${SOURCE_FILE} NAME_WE)
     # Generate executable
     add_executable(${EXECUTABLE_NAME} ${SOURCE_FILE})
+    # Add directory for extra header files
+    target_include_directories(${EXECUTABLE_NAME} PRIVATE "~/Applications/C-Turtle")
 endforeach()

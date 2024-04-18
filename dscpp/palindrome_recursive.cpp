@@ -24,4 +24,5 @@ int main() {
   std::cout << is_palindrome("aibohphobia");
   std::cout << is_palindrome("live, not on evil!");
   // PS. I am so good at this that sometimes I scare myself OwO
+  // I mean, it would be simpler to have a wrapper that removes stuff by whathever
 }

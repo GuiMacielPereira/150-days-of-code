@@ -137,3 +137,10 @@
 
 **Feelings**: Felt great, in the beggining I was so slow but then somehow got into it yeah
 
+
+### 2024-04-17 18:25:13 - Day 21
+#### Start recursion with cturtle
+**Description**: Read through recursion chapter that uses cturtle and tried to install the cturtle library. Since I don't really know how the library works, I haven't managed to figure it out yet. I  have added the directoreis fort hte header files but I think I am still missing hte actuall executables for the CImg library? Hopefully I can figure it out next section
+
+**Feelings**: It was fine, I am a bit sick from the plane journey and doing this over the train journey is not the best pleasant experience but it is certainly doable ahahahah. Actually I feel good about myself.
+
