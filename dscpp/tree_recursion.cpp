@@ -1,4 +1,5 @@
 #include <CTurtle.hpp>
+#include <CImg.h>
 
 namespace ct = cturtle;
 

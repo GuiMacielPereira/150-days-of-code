@@ -29,4 +29,6 @@ foreach(SOURCE_FILE IN LISTS SOURCES)
     add_executable(${EXECUTABLE_NAME} ${SOURCE_FILE})
     # Add directory for extra header files
     target_include_directories(${EXECUTABLE_NAME} PRIVATE "~/Applications/C-Turtle")
+    # Make X11 library available
+    target_link_libraries(${EXECUTABLE_NAME}  PRIVATE X11)
 endforeach()

@@ -144,3 +144,10 @@
 
 **Feelings**: It was fine, I am a bit sick from the plane journey and doing this over the train journey is not the best pleasant experience but it is certainly doable ahahahah. Actually I feel good about myself.
 
+
+### 2024-04-18 21:19:47 - Day 22
+#### Added CImg library
+**Description**: Turns out that the problem was not on the header files themselves but rather on the X11 library that for some reason needs to be explicitly stated in the cmake file (i.e. called with -lX11 in the compile command)
+
+**Feelings**: Atually really great! I was focused so time flew by and also it was very rewarding seeing the CImg librarry working without issues (still remember how it was to get the fltk library to work :sob:)
+
