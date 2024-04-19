@@ -151,3 +151,10 @@
 
 **Feelings**: Atually really great! I was focused so time flew by and also it was very rewarding seeing the CImg librarry working without issues (still remember how it was to get the fltk library to work :sob:)
 
+
+### 2024-04-19 21:20:55 - Day 23
+#### Putting color in leaves of tree
+**Description**: Implemented a way to color only the very last branches of the tree, making them green. Actually this was not very straihtforwad but I think I managed to come to a somewhat elegant solution by using the return value of the recursive function.
+
+**Feelings**: Really good and really focused, although I am a bit worried that I'll probably discard this course for another DSA course. I hate changing it mid way through but the new DSA course from Georgia Tech is for grown ups and will consume much more weekly time (they do have a deadline :sob:).
+
