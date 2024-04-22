@@ -158,3 +158,10 @@
 
 **Feelings**: Really good and really focused, although I am a bit worried that I'll probably discard this course for another DSA course. I hate changing it mid way through but the new DSA course from Georgia Tech is for grown ups and will consume much more weekly time (they do have a deadline :sob:).
 
+
+### 2024-04-22 21:16:36 - Day 24
+#### On pause
+**Description**: I started doing an acredited DSA course, so I have this one on pause. I am still keeping my streak but I might not record it here for a while until I figure it out how to put it in the same repository.
+
+**Feelings**: Today I did 2h, which is my new daily target and actually it was so much better than cooking.
+
